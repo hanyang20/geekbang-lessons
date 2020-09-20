@@ -30,8 +30,8 @@ import org.springframework.stereotype.Component;
  */
 // basePackages() @AliasFor value()
 // value() @AliasFor basePackages()
-@MyComponentScan2(basePackages = "org.geekbang.thinking.in.spring.annotation") // 指定 Class-Path(s)
-//@ComponentScan(value = "org.geekbang.thinking.in.spring.annotation") // 指定 Class-Path(s)
+//@MyComponentScan2(basePackages = "org.geekbang.thinking.in.spring.annotation") // 指定 Class-Path(s)
+@ComponentScan(value = "org.geekbang.thinking.in.spring.annotation") // 指定 Class-Path(s)
 public class ComponentScanDemo {
 
     public static void main(String[] args) {

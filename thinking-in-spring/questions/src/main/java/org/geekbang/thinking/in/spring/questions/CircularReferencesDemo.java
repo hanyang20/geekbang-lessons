@@ -41,10 +41,31 @@ public class CircularReferencesDemo {
 
         System.out.println("Student : " + context.getBean(Student.class));
         System.out.println("ClassRoom : " + context.getBean(ClassRoom.class));
+//        System.out.println("A : " + context.getBean(A.class));
+//        System.out.println("B : " + context.getBean(B.class));
+//        System.out.println("C : " + context.getBean(C.class));
 
         // 关闭 Spring 应用上下文
         context.close();
     }
+//    @Bean
+//    public static A a() {
+//        A a = new A();
+//        a.setName("A 的实例");
+//        return a;
+//    }
+//    @Bean
+//    public static B b() {
+//        B b = new B();
+//        b.setName("B 的实例");
+//        return b;
+//    }
+//    @Bean
+//    public static C c() {
+//        C c = new C();
+//        c.setName("C 的实例");
+//        return c;
+//    }
 
     @Bean
     public static Student student() {

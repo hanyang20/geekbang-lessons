@@ -30,6 +30,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Scope;
 
+import java.util.Collection;
 import java.util.Map;
 
 /**
@@ -80,6 +81,9 @@ public class BeanScopeDemo implements DisposableBean {
 
     @Autowired
     private Map<String, User> users;
+
+    @Autowired
+    private Collection<User> collections;
 
     @Autowired
     private ConfigurableListableBeanFactory beanFactory; // Resolvable Dependency
@@ -148,6 +152,7 @@ public class BeanScopeDemo implements DisposableBean {
         System.out.println("beanScopeDemo.prototypeUser2 = " + beanScopeDemo.prototypeUser2);
 
         System.out.println("beanScopeDemo.users = " + beanScopeDemo.users);
+        System.out.println("beanScopeDemo.collections = " + beanScopeDemo.collections);
     }
 
     @Override

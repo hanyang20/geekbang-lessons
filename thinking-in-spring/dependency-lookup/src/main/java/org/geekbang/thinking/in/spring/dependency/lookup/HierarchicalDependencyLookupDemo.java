@@ -46,8 +46,8 @@ public class HierarchicalDependencyLookupDemo {
         beanFactory.setParentBeanFactory(parentBeanFactory);
 //        System.out.println("当前 BeanFactory 的 Parent BeanFactory ： " + beanFactory.getParentBeanFactory());
 
-        displayContainsLocalBean(beanFactory, "user");
-        displayContainsLocalBean(parentBeanFactory, "user");
+//        displayContainsLocalBean(beanFactory, "user");
+//        displayContainsLocalBean(parentBeanFactory, "user");
 
         displayContainsBean(beanFactory, "user");
         displayContainsBean(parentBeanFactory, "user");

@@ -25,10 +25,7 @@ import org.springframework.core.io.ResourceLoader;
 import org.springframework.core.io.support.EncodedResource;
 import org.springframework.util.StringUtils;
 
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
+import java.io.*;
 import java.nio.file.*;
 import java.text.MessageFormat;
 import java.util.Locale;
@@ -125,10 +122,16 @@ public class DynamicResourceMessageSource extends AbstractMessageSource implemen
                                 // 处理为绝对路径
                                 Path filePath = dirPath.resolve(fileRelativePath);
                                 File file = filePath.toFile();
-                                Properties properties = loadMessageProperties(new FileReader(file));
-                                synchronized (messageProperties) {
-                                    messageProperties.clear();
-                                    messageProperties.putAll(properties);
+//                                Properties properties = loadMessageProperties(new FileReader(file));
+//                                synchronized (messageProperties) {
+//                                    messageProperties.clear();
+//                                    messageProperties.putAll(properties);
+//                                }
+                                Reader reader = new InputStreamReader(new FileInputStream(file), ENCODING);
+                                Properties properties = loadMessageProperties(reader);
+                                synchronized (this.messageProperties) {
+                                    this.messageProperties.clear();
+                                    this.messageProperties.putAll(properties);
                                 }
                             }
                         }

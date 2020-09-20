@@ -29,7 +29,7 @@ import java.util.Collection;
  * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @since
  */
-public class UserRepository {
+public class  UserRepository {
 
     private Collection<User> users; // 自定义 Bean
 

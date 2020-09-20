@@ -6,7 +6,7 @@
 
    <!-- 静态方法实例化 Bean -->
     <bean id="user-by-static-method" class="org.geekbang.thinking.in.spring.ioc.overview.domain.User"
-          factory-method="createUser"/>
+          factory-method="createUser" autowire=""/>
 
    <!-- 实例（Bean）方法实例化 Bean -->
    <bean id="user-by-instance-method" factory-bean="userFactory" factory-method="createUser"/>

@@ -31,9 +31,9 @@ import java.util.Map;
 // 将当前类作为 Configuration Class
 @ImportResource("classpath:/META-INF/dependency-lookup-context.xml")
 @Import(User.class)
-@PropertySource("classpath:/META-INF/user-bean-definitions.properties") // Java 8+ @Repeatable 支持
-@PropertySource("classpath:/META-INF/user-bean-definitions.properties")
-// @PropertySources(@PropertySource(...))
+//@PropertySource("classpath:/META-INF/user-bean-definitions.properties") // Java 8+ @Repeatable 支持
+ @PropertySources({@PropertySource("classpath:/META-INF/user-bean-definitions.properties"),
+         @PropertySource("classpath:/META-INF/super.properties")})
 public class AnnotatedSpringIoCContainerMetadataConfigurationDemo {
 
     /**

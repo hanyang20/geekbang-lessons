@@ -32,12 +32,18 @@ public class ResolvableTypeDemo {
         // StringList <- ArrayList <- AbstractList <- List <- Collection
         ResolvableType resolvableType = ResolvableType.forClass(StringList.class);
 
-        resolvableType.getSuperType(); // ArrayList
-        resolvableType.getSuperType().getSuperType(); // AbstractList
+        System.out.println(resolvableType.getSuperType());// ArrayList
+        System.out.println(resolvableType.getSuperType().getSuperType());// AbstractList
 
         System.out.println(resolvableType.asCollection().resolve()); // 获取 Raw Type
         System.out.println(resolvableType.asCollection().resolveGeneric(0)); // 获取泛型参数类型
 
-
+//        ResolvableType t = ResolvableType.forField(ResolvableTypeDemo.class.getDeclaredField("myMap"));
+//        t.getSuperType(); // AbstractMap&lt;Integer, List&lt;String&gt;&gt;
+//        t.asMap(); // Map&lt;Integer, List&lt;String&gt;&gt;
+//        t.getGeneric(0).resolve(); // Integer
+//        t.getGeneric(1).resolve(); // List
+//        t.getGeneric(1); // List&lt;String&gt;
+//        t.resolveGeneric(1, 0); // String
     }
 }

@@ -21,13 +21,8 @@ import java.util.EventObject;
 import java.util.Observable;
 import java.util.Observer;
 
-/**
- * {@link Observer} 示例
- *
- * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
- * @see Observer
- * @since
- */
+
+
 public class ObserverDemo {
 
     public static void main(String[] args) {

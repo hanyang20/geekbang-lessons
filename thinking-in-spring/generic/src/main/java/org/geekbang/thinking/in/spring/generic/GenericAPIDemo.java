@@ -54,7 +54,6 @@ public class GenericAPIDemo {
         Type[] typeVariables = parameterizedType.getActualTypeArguments();
 
         Stream.of(typeVariables)
-                .map(TypeVariable.class::cast) // Type -> TypeVariable
                 .forEach(System.out::println);
 
     }

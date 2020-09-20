@@ -77,7 +77,7 @@ public class ApplicationListenerDemo implements ApplicationEventPublisherAware {
 
         // 发送 PayloadApplicationEvent
         applicationEventPublisher.publishEvent("Hello,World");
-        applicationEventPublisher.publishEvent(new MyPayloadApplicationEvent(this, "Hello,World"));
+//        applicationEventPublisher.publishEvent(new MyPayloadApplicationEvent(this, "Hello,World"));
     }
 
     static class MyPayloadApplicationEvent extends PayloadApplicationEvent<String> {

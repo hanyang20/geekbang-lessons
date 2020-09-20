@@ -36,7 +36,6 @@ import java.util.Map;
 public class DataBinderDemo {
 
     public static void main(String[] args) {
-
         // 创建空白对象
         User user = new User();
         // 1. 创建 DataBinder

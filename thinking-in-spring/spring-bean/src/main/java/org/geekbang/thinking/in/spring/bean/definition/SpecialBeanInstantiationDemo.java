@@ -45,8 +45,12 @@ public class SpecialBeanInstantiationDemo {
         AutowireCapableBeanFactory beanFactory = applicationContext.getAutowireCapableBeanFactory();
 
         ServiceLoader<UserFactory> serviceLoader = beanFactory.getBean("userFactoryServiceLoader", ServiceLoader.class);
-
-        displayServiceLoader(serviceLoader);
+        Iterator<UserFactory> iterator = serviceLoader.iterator();
+        while (iterator.hasNext()){
+            UserFactory next = iterator.next();
+            System.out.println(next.createUser());
+        }
+//        displayServiceLoader(serviceLoader);
 
 //        demoServiceLoader();
 

@@ -22,8 +22,6 @@ import org.springframework.core.io.Resource;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
@@ -34,7 +32,7 @@ import java.util.Properties;
  * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @since
  */
-public class User implements BeanNameAware {
+public class  User implements BeanNameAware {
 
     private Long id;
 
@@ -49,11 +47,8 @@ public class User implements BeanNameAware {
     private Resource configFileLocation;
 
     private Company company;
-
     private Properties context;
-
     private String contextAsText;
-
     /**
      * 当前 Bean 的名称
      */
@@ -115,28 +110,6 @@ public class User implements BeanNameAware {
         this.company = company;
     }
 
-    public static User createUser() {
-        User user = new User();
-        user.setId(1L);
-        user.setName("小马哥");
-        return user;
-    }
-
-    @PostConstruct
-    public void init() {
-        System.out.println("User Bean [" + beanName + "] 初始化...");
-    }
-
-    @PreDestroy
-    public void destroy() {
-        System.out.println("User Bean [" + beanName + "] 销毁中...");
-    }
-
-    @Override
-    public void setBeanName(String name) {
-        this.beanName = name;
-    }
-
     public Properties getContext() {
         return context;
     }
@@ -167,5 +140,27 @@ public class User implements BeanNameAware {
                 ", contextAsText='" + contextAsText + '\'' +
                 ", beanName='" + beanName + '\'' +
                 '}';
+    }
+
+    public static User createUser() {
+        User user = new User();
+        user.setId(1L);
+        user.setName("小马哥");
+        return user;
+    }
+
+    @PostConstruct
+    public void init() {
+        System.out.println("User Bean [" + beanName + "] 初始化...");
+    }
+
+    @PreDestroy
+    public void destroy() {
+        System.out.println("User Bean [" + beanName + "] 销毁中...");
+    }
+
+    @Override
+    public void setBeanName(String name) {
+        this.beanName = name;
     }
 }

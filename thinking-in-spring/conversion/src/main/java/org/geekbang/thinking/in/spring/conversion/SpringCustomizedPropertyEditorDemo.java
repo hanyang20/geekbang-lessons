@@ -39,7 +39,7 @@ public class SpringCustomizedPropertyEditorDemo {
         // AbstractApplicationContext -> "conversionService" ConversionService Bean
         // -> ConfigurableBeanFactory#setConversionService(ConversionService)
         // -> AbstractAutowireCapableBeanFactory.instantiateBean
-        // -> AbstractBeanFactory#getConversionService ->
+        // -> AbstractBeanFactory#  ->
         // BeanDefinition -> BeanWrapper -> 属性转换（数据来源：PropertyValues）->
         // setPropertyValues(PropertyValues) -> TypeConverter#convertIfNecessnary
         // TypeConverterDelegate#convertIfNecessnary  -> PropertyEditor or ConversionService

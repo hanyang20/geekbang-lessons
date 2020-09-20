@@ -38,7 +38,7 @@ public class ExternalConfigurationDependencySourceDemo {
     @Value("${usr.name}")
     private String name;
 
-    @Value("${user.resource:classpath://default.properties}")
+    @Value("${user.resource:classpath:/default.properties}")
     private Resource resource;
 
     public static void main(String[] args) {

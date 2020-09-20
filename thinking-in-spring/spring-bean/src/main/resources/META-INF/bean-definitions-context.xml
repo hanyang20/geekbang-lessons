@@ -8,6 +8,6 @@
     <import resource="classpath:/META-INF/dependency-lookup-context.xml" />
 
     <!-- 将 Spring 容器中 "user" Bean 关联/建立别名 - "xiaomage-user" -->
-    <alias name="user" alias="xiaomage-user" />
+    <alias name="user" alias="xiaomage-user"/>
 
 </beans>

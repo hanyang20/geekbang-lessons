@@ -16,6 +16,8 @@
  */
 package sun.net.www.protocol.x;
 
+import org.geekbang.thinking.in.spring.resource.util.XURLConnection;
+
 import java.io.IOException;
 import java.net.URL;
 import java.net.URLConnection;

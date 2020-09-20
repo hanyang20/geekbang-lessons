@@ -24,5 +24,5 @@ import java.util.ArrayList;
  * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @since
  */
-class StringList extends ArrayList<String> { // 泛型参数具体化（字节码有记录）
+public class StringList extends ArrayList<String> { // 泛型参数具体化（字节码有记录）
 }

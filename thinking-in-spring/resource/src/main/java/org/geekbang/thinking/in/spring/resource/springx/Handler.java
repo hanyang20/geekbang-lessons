@@ -25,12 +25,12 @@ import java.net.URL;
 import java.nio.charset.Charset;
 
 /**
- * 简单地继承 {@link sun.net.www.protocol.x.Handler} 类
+ * 简单地继承 {@link org.geekbang.thinking.in.spring.resource.util.Handler} 类
  *
  * @author <a href="mailto:mercyblitz@gmail.com">Mercy</a>
  * @since
  */
-public class Handler extends sun.net.www.protocol.x.Handler {
+public class Handler extends org.geekbang.thinking.in.spring.resource.util.Handler {
 
     // -Djava.protocol.handler.pkgs=org.geekbang.thinking.in.spring.resource
     public static void main(String[] args) throws IOException {

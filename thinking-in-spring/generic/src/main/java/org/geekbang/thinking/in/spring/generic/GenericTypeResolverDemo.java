@@ -60,7 +60,7 @@ public class GenericTypeResolverDemo {
         return null;
     }
 
-    public static ArrayList<Object> getList() { // 泛型参数类型具体化
+    public static <E> ArrayList<E> getList() { // 泛型参数类型具体化
         return null;
     }
 
@@ -73,7 +73,7 @@ public class GenericTypeResolverDemo {
 
         // 声明类 GenericTypeResolverDemo.class
         Class<?> returnType = resolveReturnType(method, containingClass);
-
+        System.out.println("===============================================");
         // 常规类作为方法返回值
         System.out.printf("GenericTypeResolver.resolveReturnType(%s,%s) = %s\n", methodName, containingClass.getSimpleName(), returnType);
         // 常规类型不具备泛型参数类型 List<E>

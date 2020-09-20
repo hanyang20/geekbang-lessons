@@ -12,8 +12,16 @@
 
     <artifactId>generic</artifactId>
 
-    <properties>
-        <spring.version>4.3.26.RELEASE</spring.version>
-    </properties>
+    <!--<properties>-->
+        <!--<spring.version>4.3.26.RELEASE</spring.version>-->
+    <!--</properties>-->
+
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>ioc-container-overview</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>

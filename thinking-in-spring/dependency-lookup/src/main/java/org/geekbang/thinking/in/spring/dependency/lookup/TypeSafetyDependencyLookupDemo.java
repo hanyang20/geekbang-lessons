@@ -24,6 +24,8 @@ import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.Map;
+
 /**
  * 类型安全 依赖查找示例
  *
@@ -62,6 +64,7 @@ public class TypeSafetyDependencyLookupDemo {
     }
 
     private static void displayListableBeanFactoryGetBeansOfType(ListableBeanFactory beanFactory) {
+        Map<String, User> beansOfType = beanFactory.getBeansOfType(User.class);
         printBeansException("displayListableBeanFactoryGetBeansOfType", () -> beanFactory.getBeansOfType(User.class));
     }
 
